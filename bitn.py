@@ -48,6 +48,14 @@ class BitBin:
         k = self.asint(num_bits)
         return bytearray.fromhex(hex(k)[2:]).decode()
 
+    def asbytes(self, num_bits):
+        """
+        Returns num_bits of bits
+        as bytes
+        """
+        k = self.asint(num_bits)
+        return bytearray.fromhex(hex(k)[2:])
+
     def asflag(self, num_bits=1):
         """
         Returns one bit as True or False
